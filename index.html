@@ -5,47 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vinayak | Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f0f4f8;
-      color: #333;
+    :root {
+      --navy: #1c2230;
+      --green: #2ecc71;
+      --white: #fdfdfd;
+      --gray: #3f3f3f;
+      --lightgray: #e9ecef;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--white);
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #0b3d91;
+      background-color: var(--navy);
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--green);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
-      padding: 2rem;
+      padding: 3rem 1rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
-      color: #0b3d91;
-      border-bottom: 2px solid #0b3d91;
+      color: var(--navy);
+      border-bottom: 2px solid var(--green);
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .project {
-      background: white;
+
+    .skills span {
+      display: inline-block;
+      background-color: var(--green);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .project-list li {
+      background-color: var(--lightgray);
       padding: 1rem;
       margin: 1rem 0;
-      border-left: 4px solid #0b3d91;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-left: 5px solid var(--green);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      list-style: none;
     }
+
     footer {
+      background-color: var(--navy);
+      color: white;
       text-align: center;
       padding: 1rem;
-      background: #eee;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
+
     a {
-      color: #0b3d91;
-      text-decoration: none;
+      color: var(--green);
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      section, header {
+        padding: 1.5rem 1rem;
+      }
     }
   </style>
 </head>
@@ -53,36 +102,53 @@
 
   <header>
     <h1>Hi, I'm Vinayak 👋</h1>
-    <p> Wassup!</p>
+    <p>Tech Explorer | Automation Fan | Cybersecurity Learner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>👨‍💻 About Me</h2>
-    <p>I’m passionate about tech, automation, and building cool stuff on the internet. I’m currently learning GitHub, n8n, and cybersecurity!</p>
+  <section id="about">
+    <h2>👨‍💼 About Me</h2>
+    <p>
+      I'm Vinayak — passionate about automating things, understanding how tech works, and building a future-ready skillset in cybersecurity and AI. I love turning ideas into real projects.
+    </p>
   </section>
 
-  <section>
-    <h2>🚀 Projects</h2>
-    <div class="project">
-      <h3>My First GitHub Page</h3>
-      <p>This portfolio page you're seeing was created using GitHub Pages!</p>
-    </div>
-    <div class="project">
-      <h3>n8n Automation Workflows</h3>
-      <p>I'm exploring no-code automation using n8n — check out my custom workflows soon!</p>
+  <section id="skills">
+    <h2>🛠 Skills</h2>
+    <div class="skills">
+      <span>n8n</span>
+      <span>REST APIs</span>
+      <span>GitHub</span>
+      <span>Automation</span>
+      <span>HTML & CSS</span>
+      <span>Cybersecurity Basics</span>
+      <span>AI Tools</span>
     </div>
   </section>
 
-  <section>
-    <h2>📫 Contact</h2>
-    <p>Email: <a href="mailto:vinayak@example.com">vinayak@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/vinayakvhebbar" target="_blank">vinayakvhebbar</a></p>
+  <section id="projects">
+    <h2>📁 Projects</h2>
+    <ul class="project-list">
+      <li><strong>🔄 Automation Portfolio:</strong> A collection of no-code/low-code workflows using n8n for real-world use cases.</li>
+      <li><strong>🌐 Personal Website:</strong> Hosted fully on GitHub Pages, this site shows my journey and projects.</li>
+      <li><strong>🔒 CyberSec 100 Days:</strong> A challenge to build daily habits and skills in ethical hacking and security.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Contact</h2>
+    <p>📧 Email: <a href="mailto:vinayak@example.com">vinayak@example.com</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/vinayakvhebbar" target="_blank">vinayakvhebbar</a></p>
   </section>
 
   <footer>
-    Made with ❤️ by Vinayak
+    <p>Made with ❤️ by Vinayak | &copy; 2025</p>
   </footer>
 
 </body>
 </html>
-
